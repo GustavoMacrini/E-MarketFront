@@ -1,27 +1,25 @@
 import { useEffect, useState } from "react";
 import ProductCarousel from "../../components/product/Carousel/index";
-import MobileStyle from './MobileHome.module.css';
-import PcStyle from './PcHome.module.css';
+import MobileStyle from "./MobileHome.module.css";
+import PcStyle from "./PcHome.module.css";
 import axios from "axios";
-
 
 //configurar css pc ou mobile
 let style = null;
-const mediaQuery = window.matchMedia('(min-width: 768px)');
+const mediaQuery = window.matchMedia("(min-width: 768px)");
 function handleTabletChange(e) {
-    if (e.matches) {
-        style = PcStyle;
-    } else {
-        style = MobileStyle;
-    }
+  if (e.matches) {
+    style = PcStyle;
+  } else {
+    style = MobileStyle;
+  }
 }
-// Escutar mudanças
-mediaQuery.addEventListener('change', handleTabletChange);
-// Chamar a função imediatamente para configurar o estado inicial
+// Escutar mudanï¿½as
+mediaQuery.addEventListener("change", handleTabletChange);
+// Chamar a funï¿½ï¿½o imediatamente para configurar o estado inicial
 handleTabletChange(mediaQuery);
 
-
-
+/*
 async function getProducts() {
     try {
         const response = await axios.get(
@@ -38,9 +36,9 @@ async function getProducts() {
         }
     }
 }
-
-function Home() {    
-    const [products, setProducts] = useState([]);
+*/
+function Home() {
+  /* const [products, setProducts] = useState([]);
     useEffect(() => {
 
         async function loadProducts() {
@@ -55,18 +53,18 @@ function Home() {
         loadProducts();
 
     }, []);
-
-    const title = "Basico";
-    return (
-        <div className={style.wrapper}>
-            <h1>Home</h1>
-            <ProductCarousel
+*/
+  const title = "Basico";
+  return (
+    <div className={style.wrapper}>
+      <h1>Home</h1>
+      {/*<ProductCarousel
                 data={{
                     title: title,
                     products: products
-                }} />
-        </div>
-    );
+                }} />*/}
+    </div>
+  );
 }
 
 export default Home;
