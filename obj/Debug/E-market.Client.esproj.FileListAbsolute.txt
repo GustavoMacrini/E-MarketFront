@@ -1,0 +1,1 @@
+D:\DotNet\E-MarketFullStack\E-Market-Client\obj\Debug\E-market.Client.esproj.CoreCompileInputs.cache
