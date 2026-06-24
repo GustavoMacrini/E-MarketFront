@@ -1,4 +1,3 @@
-/** Produto vindo da API / Home */
 export type ProductDto = {
   id: string;
   name: string;
@@ -6,7 +5,6 @@ export type ProductDto = {
   description: string;
 };
 
-/** O que a Home passa para o Carousel */
 export type CarouselDto = {
   title: string;
   products: ProductDto[];
